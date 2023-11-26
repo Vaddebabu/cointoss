@@ -13,7 +13,7 @@ function processResult(result) {
 function flipCoin(){
   coin.setAttribute('class', '');
   const random = Math.random();
-  const result = random < 0.5 ? 'virat' : 'tails';
+  const result = random < 0.5 ? 'head' : 'tails';
   deferFn(function(){
     coin.setAttribute('class', 'animate-' + result);
     deferFn(processResult.bind(null, result), 2900);
